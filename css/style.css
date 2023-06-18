@@ -91,6 +91,7 @@ nav div ul li {
     list-style-type: none;
     display: inline-block;
     margin-right: 10px;
+    transition: all 0.5s ease; /* Add this to animate changes */
 }
 
 /* nav div {
@@ -105,6 +106,7 @@ nav div ul li a {
     text-decoration: none;
     color: var(--cyan-300);
     font-size: 1.3rem;
+    
 }
 
 nav div ul li:hover {
@@ -217,7 +219,8 @@ a {
 }
 
 #about-div {
-    max-width: 42%;
+    max-width: 45%;
+    min-width: 35%;
     line-height: 1.5rem;
     
     
@@ -346,3 +349,101 @@ p {
     color: var(--yellow-300);
     text-decoration: none;
 }
+
+.inline-link:hover {
+    color: var(--yellow-300);
+    text-decoration: underline;
+}
+
+#logo-img {
+    border-radius: 10px;
+}
+
+.side-line {
+    position: fixed;
+    bottom: 0;
+    width: 1px;
+    
+    background-color: var(--cyan-500); /* Change this to the color you want for the line */
+}
+  
+.left-side {
+    left: 5%;
+    height: 30vh;
+}
+  
+.right-side {
+    right: 5%;
+    height: 15vh;
+}
+  
+.content {
+    position: absolute;
+    top: -20px; /* Adjust this value to position your content above the line */
+    white-space: nowrap;
+    color: var(--cyan-500); /* Change this to the color you want for the content */
+    font-size: 1.3rem; /* Adjust this value to change the size of the content */
+    /* Add additional styling for your content here */
+}
+
+#email {
+    /* existing styles */
+
+    /* add the following line */
+    writing-mode: vertical-rl;
+    transform: rotate(360deg);
+    position: fixed;
+    top: 50%;
+    right: 4.5%;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    border-radius: 10px;
+    
+}
+
+#email:hover {
+    transform: translate(-10px, -10px); /* moves the button up and to the left */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+#email-a {
+    opacity: 1;
+    color: var(--cyan-400);
+    text-decoration: none;
+
+}
+
+
+#linkedin {
+    position: fixed;
+    top: 59%;
+}
+
+#facebook {
+    position: fixed;
+    top: 52%;
+}
+
+#github {
+    position: fixed;
+    top: 45%;
+}
+
+#instagram {
+    position: fixed;
+    top: 38%;
+}
+
+.social-icon {
+    fill: var(--cyan-200);
+    height: 1.3em;
+    position: fixed;
+    left: 4.5%;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    
+}
+
+.social-icon:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+  
