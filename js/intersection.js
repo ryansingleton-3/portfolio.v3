@@ -1,11 +1,11 @@
 // Select all .project-div, video, and heading elements on the page
-const elements = document.querySelectorAll('.project-div, video, h1, h2, h3, h4, h5, h6, p, #headshot-img, .social-icon, #email');
+const elements = document.querySelectorAll('.project-div, video, h1, h2, h3, h4, h5, h6, p, #headshot-img, .social-icon, #email, .tab-content, .achievements, #tab-list-container, #tab-content-container, #education-tab-list-container, #education-tab-content-container, .certificates, .certificate-list, .btn');
 
 // Define the options for the Intersection Observer
 const options = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: 0.5 // Callback will run when 10% of the target is visible
+  threshold: 0.5 // Callback will run when 50% of the target is visible
 };
 
 // Define the callback for the Intersection Observer
