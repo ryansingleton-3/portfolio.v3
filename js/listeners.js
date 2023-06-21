@@ -147,7 +147,16 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     // If media query does not match
     var element = document.querySelector(".hamburger-menu");
     element.classList.add("active");
-  }
+}
+
+// Call checkScroll function when the page is loaded
+checkScroll();
+
+// Call checkScroll function when the screen is resized
+window.addEventListener('resize', checkScroll);
+
+// Call checkScroll function when the page is scrolled
+window.addEventListener('scroll', checkScroll);
   
 
   
