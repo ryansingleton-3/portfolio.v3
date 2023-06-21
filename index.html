@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/large.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Ryan Singleton</title>
 </head>
@@ -16,8 +17,16 @@
         <div id="logo-div">
             <img src="images/logo.png" id="logo-img" alt="Ryan Singleton Logo">
         </div>
-        <div id="right-side-nav">
-            <ul>
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div id="right-side-nav" class="overlay">
+            <div id="btn-div">
+                <button class="btn"><a href="./CV-Ryan_Singleton.pdf" target="_blank" id="resume-btn">Resume</a></button>
+            </div>
+            <ul id="nav-ul">
                 <li>
                     <a class="nav-item" href="#about-section">About</a>
                 </li>
@@ -34,9 +43,7 @@
                     <a class="nav-item" href="#contact-section">Contact</a>
                 </li>
             </ul>
-            <div id="btn-div">
-                <button class="btn"><a href="./CV-Ryan_Singleton.pdf" target="_blank" id="resume-btn">Resume</a></button>
-            </div>
+            
         </div>
     </nav>
     <div class="side-line left-side">
@@ -113,7 +120,6 @@
     
     <section id="experience-section">
         <h3>Experience</h3>
-        <div class="experience-container"></div>
         <div class="tab-container">
             <div id="tab-list-container">
                 <ul class="tab-list">

@@ -93,32 +93,100 @@ nav {
     font-family: var(--body-font);
 }
 
-nav div ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 10px;
-    transition: all 0.5s ease; /* Add this to animate changes */
-}
-
-/* nav div {
-    border: 1px solid red;
-} */
-
-nav div img {
-    max-height: 70px;
-}
-
-nav div ul li a {
-    text-decoration: none;
-    color: var(--cyan-300);
-    font-size: 1.3rem;
+.hamburger-menu {
+    display: flex; /* Visible by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    position: fixed; /* Add this line */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     
 }
 
-nav div ul li:hover {
-    transform: translate(-5px, -5px); /* moves the button up and to the left */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+.hamburger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--cyan-300); /* Change to desired color */
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
 }
+
+#right-side-nav {
+    display: none; /* Hidden by default */
+}
+
+/* Other CSS rules remain the same */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:last baseline
+}
+
+.overlay.active {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay #nav-ul {
+    text-align: center;
+    margin-top: 30px; 
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0; /* Add this line */
+    margin: 0 auto; /* Add this line */
+    margin-bottom: 30%;
+}
+
+.overlay #nav-ul li {
+    margin: 15px 0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.overlay #nav-ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--body-font);
+    font-size: 3rem;
+}
+
+.overlay #btn-div {
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+ 
+/* Rest of your CSS */
 
 #right-side-nav {
     display: flex;
@@ -147,38 +215,40 @@ nav div ul li:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
 }
 
-
-
-
 #btn-div {
     display: flex;
     align-items: center;
     
 }
 
-ul {
+/* ul {
     margin-right: 10px;
-}
+} */
 
 #hello-section {
     position: relative;
-    margin-left: 20%;
-    margin-top: 10%;
+    margin-left: 10%;
+    margin-top: 30vh;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 1.5rem;
     line-height: 10px;
     color: var(--cyan-200);
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 1.5rem;
     line-height: 30px;
     color: var(--cyan-400);
 }
+
+h3 {
+    font-size: 1.5rem;
+}
+
 p {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-family: var(--body-font);
     color: var(--cyan-400);
 }
@@ -205,7 +275,7 @@ p {
 
 #hand-wave:hover {
     animation-name: wave-animation;
-    animation-duration: 0.8s;
+    animation-duration: 3s;
 }
 
 a {
@@ -215,34 +285,40 @@ a {
 
 #hello-section p:last-of-type {
     color: var(--cyan-500);
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 #about-section {
     /* border: 1px solid white; */
     position: relative;
-    margin-top: 30%;
-    margin-left: 25%;
-    max-width: 50%;
+    margin-top: 50vh;
+    margin-left: 10%;
+    max-width: 80%;
+}
+
+#about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 #about-div {
-    max-width: 45%;
+    max-width: 100%;
     min-width: 35%;
-    line-height: 1.5rem;
-    
-    
 }
 
 #about-div p {
     color: var(--cyan-300);
-    font-size: 1.1rem;
+    font-size: .8rem;
     
 }
 
 #about-img-div {
-    max-width: 50%;
+    max-width: 90%;
     max-height: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #about-img-div img {
@@ -262,33 +338,26 @@ a {
     transition: opacity 2s ease-out; /* Animate the opacity property */ 
 }
 
-#about-container {
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-h3 {
-    font-size: 3rem;
-}
-
 #work-section {
     position: relative;
-    margin-top: 15%;
-    margin-left: 20%;
-    max-width: 60%;
+    margin-top: 50vh;
+    margin-left: 10%;
+    margin-bottom: 50vh;
+    max-width: 80%;
     /* border: 1px solid white; */
 }
 
 .project-div {
     display: flex; /* Add this to use Flexbox */
+    flex-direction: column;
     justify-content: space-between; /* Add this to put space between your items */
     position: relative; /* Add this to establish a new positioning context for children */
     /* border: 1px solid white; */
     align-items: center; /* Add this to vertically center the video and text */
-    margin: 10% 0px 10% 0px;
+    margin: 10% 0px 30% 0px;
     opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease-out; /* Animate the opacity property */
+
 }
 
 
@@ -299,16 +368,8 @@ h3 {
 
 .video-div {
     position: relative; /* Add this to allow z-index and transform to work */
-    max-width: 60%;
-    z-index: 1; /* This will ensure the video is below the text */
+    max-width: 85%;
     flex: 1; /* Add this to make the video take up half the space */
-}
-
-#middle-video-div {
-    position: relative;
-    margin-left: 40%;
-    /* border-right: 1px solid white;
-    border-bottom: 1px solid white; */
 }
 
 .video {
@@ -326,20 +387,19 @@ h3 {
 }
 
 .text-div-right, .text-div-left {
-    position: absolute; /* Add this to allow the text to overlap the video */
-    top: 0; /* Position the text at the top of the .project-div */
-    z-index: 2; /* Ensure the text is above the video */
-    width: 50%; /* Add this to make the text take up half the space */
+    width: 100%; /* Add this to make the text take up half the space */
     text-align: center; /* Add this to center the text */
 }
 
-.text-div-right {
-    right: 0; /* Position the text at the right of the .project-div */
+.video-div {
+    order: 1;
 }
 
-.text-div-left {
-    left: 0; /* Position the text at the left of the .project-div */
+.text-div-right, .text-div-left {
+    order: 2;
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
     opacity: 0; /* Start fully transparent */
@@ -366,13 +426,13 @@ p {
 
 #logo-img {
     border-radius: 10px;
+    max-width: 20%;
 }
 
 .side-line {
     position: fixed;
     bottom: 0;
     width: 1px;
-    
     background-color: var(--cyan-500); /* Change this to the color you want for the line */
 }
   
@@ -424,30 +484,33 @@ p {
 
 #linkedin {
     position: fixed;
-    top: 38%;
+    left: 25vw;
 }
 
 #facebook {
     position: fixed;
-    top: 52%;
+    left: 55vw;
 }
 
 #github {
     position: fixed;
-    top: 45%;
+    left: 40vw;
 }
 
 #instagram {
     position: fixed;
-    top: 59%;
+    left: 70vw;
+    
 }
 
 .social-icon {
     fill: var(--cyan-200);
-    height: 1.3em;
-    position: fixed;
-    left: 4.5%;
-    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    height: 1em;
+    position: absolute;
+    top: 3vh;
+    left: 50vw;
+    transition: opacity 1s, visibility 1s;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
     
 }
 
@@ -460,8 +523,11 @@ p {
 #experience-section {
     position: relative;
     margin-top: 15%;
-    margin-left: 30%;
-    max-width: 50%;
+    margin-left: 10%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50vh;
     /* border: 1px solid white; */
 }
 
@@ -469,9 +535,41 @@ p {
     max-width: 100%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column; /* Change this to column */
     align-items: center;
     justify-content: center;
-  }
+}
+
+#tab-content-container {
+    max-width: 100%;
+    max-height: 100%;
+    border-top: 1px solid var(--yellow-200);
+    padding-left: 3%;
+    transition: all 1s ease;
+    order: 2;
+}
+
+#tab-list-container {
+    /* border: 1px solid yellow; */
+    margin-top: 3%;
+    transition: all 1s ease;
+    min-width: 25%;
+    order: 1;
+    display: block;
+    max-width: 100%;
+}
+
+.tab-list {
+    display: flex; /* Add this to make the list items appear in a row */
+    flex-direction: row; /* Add this to make the list items appear in a row */
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+}
+
+/* Rest of your CSS */
+
   
 .tab-list {
     display: flex;
@@ -479,24 +577,21 @@ p {
     list-style-type: none;
     padding: 0;
     align-items: center;
-    flex-direction: column;
 
 }
   
 .tab-list li {
-    margin-right: 5%;
-    margin-bottom: 20%;
+    margin-right: 3%;
     cursor: pointer;
     font-weight: bold;
     color: var(--cyan-300);
     transition: all .6s ease; /* "all" will apply the transition to all properties */
     text-align: center;
-    font-size: 1.3rem;
+    font-size: .8rem;
 }
   
 .tab-list li.active {
     /* border: 1px solid var(--yellow-300); */
-    
     border-radius: 5px;
 }
   
@@ -507,7 +602,9 @@ p {
 
 .tab-item.active {
     border: 1px solid var(--yellow-200);
-    padding: 10%;
+    padding: 1%;
+    margin: 0 2%;
+    /* padding: 10%; */
 }
   
 .tab-content.active {
@@ -517,7 +614,7 @@ p {
 }
 
 h4 {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .tab-list li:hover {
@@ -528,7 +625,7 @@ h4 {
 .tab-content ul li {
     margin-bottom: 3%;
     font-family: var(--body-font);
-    font-size: 1.1rem;
+    font-size: .8rem;
     list-style-type: none;
 }
 
@@ -555,49 +652,59 @@ h4 {
 }
 
 
-#tab-content-container {
-    max-width: 80%;
-    max-height: 100%;
-    border-left: 1px solid var(--yellow-200);
-    padding-left: 3%;
-    transition: all 1s ease;
-}
 
-.tab-container {
-    display: flex;
-    justify-content: space-between;
-    align-items:start;
-}
-
-#tab-list-container {
-    /* border: 1px solid yellow; */
-    margin-top: 3%;
-    transition: all 1s ease;
-    min-width: 25%;
-    
-}
 /* -------------------------------------------------------------------- */
-
-.education-tab-container {
-    display: flex;
-    justify-content: space-between;
-    align-items:start;
-}
 
 #education-section {
     position: relative;
     margin-top: 15%;
-    margin-left: 20%;
-    max-width: 50%;
+    margin-left: 10%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50vh;
+    /* border: 1px solid white; */
 }
 
 .education-tab-container {
     max-width: 100%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column; /* Change this to column */
     align-items: center;
     justify-content: center;
-  }
+}
+
+#education-tab-content-container {
+    max-width: 100%;
+    max-height: 100%;
+    border-top: 1px solid var(--yellow-200);
+    padding-left: 3%;
+    transition: all 1s ease;
+    order: 2;
+}
+
+#education-tab-list-container {
+    /* border: 1px solid yellow; */
+    margin-top: 3%;
+    transition: all 1s ease;
+    min-width: 25%;
+    order: 1;
+    display: block;
+    max-width: 100%;
+}
+
+.education-tab-list {
+    display: flex; /* Add this to make the list items appear in a row */
+    flex-direction: row; /* Add this to make the list items appear in a row */
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+}
+
+/* Rest of your CSS */
+
   
 .education-tab-list {
     display: flex;
@@ -605,24 +712,21 @@ h4 {
     list-style-type: none;
     padding: 0;
     align-items: center;
-    flex-direction: column;
 
 }
   
 .education-tab-list li {
-    margin-right: 5%;
-    margin-bottom: 20%;
+    margin-right: 3%;
     cursor: pointer;
     font-weight: bold;
     color: var(--cyan-300);
-    transition: all 0.5s ease; /* "all" will apply the transition to all properties */
+    transition: all .6s ease; /* "all" will apply the transition to all properties */
     text-align: center;
-    font-size: 1.3rem;
+    font-size: .8rem;
 }
   
 .education-tab-list li.active {
     /* border: 1px solid var(--yellow-300); */
-    transition: all .7s ease;
     border-radius: 5px;
 }
   
@@ -633,14 +737,19 @@ h4 {
 
 .education-tab-item.active {
     border: 1px solid var(--yellow-200);
-    padding: 10%;
-    transition: all 1s ease;
+    padding: 1%;
+    margin: 0 2%;
+    /* padding: 10%; */
 }
   
 .education-tab-content.active {
     display: block;
     transition: all 1s ease; /* "all" will apply the transition to all properties */
     
+}
+
+h4 {
+    font-size: 1rem;
 }
 
 .education-tab-list li:hover {
@@ -651,7 +760,7 @@ h4 {
 .education-tab-content ul li {
     margin-bottom: 3%;
     font-family: var(--body-font);
-    font-size: 1.1rem;
+    font-size: .8rem;
     list-style-type: none;
 }
 
@@ -666,32 +775,7 @@ h4 {
     border-style: solid;
     border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
     border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
-}
-
-
-#education-tab-content-container {
-    max-width: 80%;
-    max-height: 100%;
-    border-right: 1px solid var(--yellow-200);
-    padding-right: 3%;
-    transition: all 1s ease;
-}
-
-.education-tab-container {
-    display: flex;
-    justify-content: space-between;
-    align-items:start;
-}
-
-#education-tab-list-container {
-    /* border: 1px solid yellow; */
-    margin-top: 3%;
-    transition: all 1s ease;
-    min-width: 25%;
-    order: 2;
-    padding-left: 3%;
-    
-}
+  }
 
 .checkmark {
     color: white;
@@ -753,8 +837,13 @@ footer p {
     box-sizing: border-box; /* include border and padding in the element's total width and height */
     font-size: 1.3rem;
 }
-  
-  
+
+
+@media screen and (max-width: 768px) {
+    #email {
+        display: none;
+    }
+}
   
   
 
