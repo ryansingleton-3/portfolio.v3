@@ -72,6 +72,11 @@
     --heading-font: 'Montserrat', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+  
+
 body {
     background-color: var(--grey-900);
     color: var(--cyan-500);
@@ -85,6 +90,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: var(--body-font);
 }
 
 nav div ul li {
@@ -121,7 +127,7 @@ nav div ul li:hover {
     margin-right: 3%;
 }
 
-.btn {
+.btn, .dropdown-btn {
     min-width: 120px;
     min-height: 50px;
     border-radius: 10px;
@@ -134,7 +140,7 @@ nav div ul li:hover {
     font-size: 1.3rem;
 }
 
-.btn:hover {
+.btn:hover, .dropdown-btn:hover {
     border-bottom: 10px solid white; /* increase bottom border thickness on hover */
     border-right: 10px solid white; /* increase right border thickness on hover */
     transform: translate(-5px, -5px); /* moves the button up and to the left */
@@ -173,6 +179,7 @@ h2 {
 }
 p {
     font-size: 1.3rem;
+    font-family: var(--body-font);
     color: var(--cyan-400);
 }
 
@@ -203,6 +210,7 @@ p {
 
 a {
     color: var(--cyan-500);
+    font-family: var(--body-font);
 }
 
 #hello-section p:last-of-type {
@@ -343,6 +351,7 @@ p {
     opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease-out; /* Animate the opacity property */ 
     font-family: var(--body-font);
+    color: var(--cyan-500);
 }
 
 .inline-link {
@@ -415,7 +424,7 @@ p {
 
 #linkedin {
     position: fixed;
-    top: 59%;
+    top: 38%;
 }
 
 #facebook {
@@ -430,7 +439,7 @@ p {
 
 #instagram {
     position: fixed;
-    top: 38%;
+    top: 59%;
 }
 
 .social-icon {
@@ -446,4 +455,308 @@ p {
     transform: translate(-5px, -5px); /* moves the button up and to the left */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
 }
+
+
+#experience-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 30%;
+    max-width: 50%;
+    /* border: 1px solid white; */
+}
+
+.tab-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.tab-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+
+}
+  
+.tab-list li {
+    margin-right: 5%;
+    margin-bottom: 20%;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cyan-300);
+    transition: all .6s ease; /* "all" will apply the transition to all properties */
+    text-align: center;
+    font-size: 1.3rem;
+}
+  
+.tab-list li.active {
+    /* border: 1px solid var(--yellow-300); */
+    
+    border-radius: 5px;
+}
+  
+.tab-content {
+    display: none;
+    
+}
+
+.tab-item.active {
+    border: 1px solid var(--yellow-200);
+    padding: 10%;
+}
+  
+.tab-content.active {
+    display: block;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+.tab-list li:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+     /* adds a shadow to create the "lifted" effect */
+}
+
+.tab-content ul li {
+    margin-bottom: 3%;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+.tab-content ul li::before {
+    content: '';
+    position: absolute;
+    /* top: 3%; */
+    left: 0;
+    transform: translateY(70%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+    border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+  }
+
+.achievements {
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    position: relative;
+}
+
+.company-span {
+    color: var(--yellow-200);
+}
+
+
+#tab-content-container {
+    max-width: 80%;
+    max-height: 100%;
+    border-left: 1px solid var(--yellow-200);
+    padding-left: 3%;
+    transition: all 1s ease;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+}
+
+#tab-list-container {
+    /* border: 1px solid yellow; */
+    margin-top: 3%;
+    transition: all 1s ease;
+    min-width: 25%;
+    
+}
+/* -------------------------------------------------------------------- */
+
+.education-tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+}
+
+#education-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 20%;
+    max-width: 50%;
+}
+
+.education-tab-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.education-tab-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+
+}
+  
+.education-tab-list li {
+    margin-right: 5%;
+    margin-bottom: 20%;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cyan-300);
+    transition: all 0.5s ease; /* "all" will apply the transition to all properties */
+    text-align: center;
+    font-size: 1.3rem;
+}
+  
+.education-tab-list li.active {
+    /* border: 1px solid var(--yellow-300); */
+    transition: all .7s ease;
+    border-radius: 5px;
+}
+  
+.education-tab-content {
+    display: none;
+    
+}
+
+.education-tab-item.active {
+    border: 1px solid var(--yellow-200);
+    padding: 10%;
+    transition: all 1s ease;
+}
+  
+.education-tab-content.active {
+    display: block;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    
+}
+
+.education-tab-list li:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+     /* adds a shadow to create the "lifted" effect */
+}
+
+.education-tab-content ul li {
+    margin-bottom: 3%;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+.education-tab-content ul li::before {
+    content: '';
+    position: absolute;
+    /* top: 3%; */
+    left: 0;
+    transform: translateY(70%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+    border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+}
+
+
+#education-tab-content-container {
+    max-width: 80%;
+    max-height: 100%;
+    border-right: 1px solid var(--yellow-200);
+    padding-right: 3%;
+    transition: all 1s ease;
+}
+
+.education-tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+}
+
+#education-tab-list-container {
+    /* border: 1px solid yellow; */
+    margin-top: 3%;
+    transition: all 1s ease;
+    min-width: 25%;
+    order: 2;
+    padding-left: 3%;
+    
+}
+
+.checkmark {
+    color: white;
+}
+
+.certificates {
+    color: white;
+    transition: all 1s ease;
+}
+
+.certificates.active {
+    transition: all 1s ease;
+}
+
+
+/* --------------------------------------------------------- */
+
+#contact-section {
+    text-align: center;
+    position: relative;
+    margin-top: 15%;
+    margin-left: 25%;
+    max-width: 50%;
+    margin-bottom: 200px;
+}
+
+#hello-btn {
+    margin-top: 5%;
+    transition: all 1s ease;
+}
+  
+
+footer p {
+    text-align: center;
+    color: var(--cyan-700);
+}
+
+
+#say-hello-a {
+    text-decoration: none;
+    min-width: 120px;
+    min-height: 50px;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box; /* include border and padding in the element's total width and height */
+    font-size: 1.3rem;
+}
+
+#resume-btn {
+    text-decoration: none;
+    min-width: 120px;
+    min-height: 50px;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box; /* include border and padding in the element's total width and height */
+    font-size: 1.3rem;
+}
+  
+  
+  
+  
+
+  
   
