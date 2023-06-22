@@ -105,8 +105,8 @@ nav {
     padding: 0;
     z-index: 10;
     position: fixed; /* Add this line */
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
     
 }
 
