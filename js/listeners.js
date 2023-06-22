@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("nav ul li a, .inline-link");
-
+  let overlay = document.querySelector(".overlay")
+  let navMenu = document.querySelector("#right-side-nav"); // Add this line
+  
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -71,16 +73,19 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
           block: "center",
         });
+        navMenu.classList.remove("active"); // Add this line
       }
     });
   });
 });
 
-let menuButton = document.querySelector(".hamburger-menu");
-let navMenu = document.querySelector("#right-side-nav");
+
 
 // Check if screen size is less than 768px
 let isSmallScreen = window.matchMedia("(max-width: 768px)");
+
+let menuButton = document.querySelector(".hamburger-menu");
+let navMenu = document.querySelector("#right-side-nav");
 
 menuButton.addEventListener("click", function () {
   // Only apply these behaviors for small screens
@@ -93,6 +98,7 @@ menuButton.addEventListener("click", function () {
     } else {
       menuButton.style.position = "";
       menuButton.style.top = "";
+      menuButton.style.right = "";
     }
   }
 });
@@ -108,6 +114,8 @@ window.addEventListener("resize", function () {
 
 // Function to hide or show social icons
 function checkScroll() {
+  let socialIcons = document.querySelectorAll(".social-icon")
+  console.log(window.pageYOffset); // Add this line
   if (window.matchMedia("(min-width: 768px)").matches) {
     // If screen width is larger than 768px, always show social icons
     socialIcons.forEach((icon) => {
@@ -116,7 +124,7 @@ function checkScroll() {
     });
   } else {
     // If screen width is less than 768px, hide/show social icons based on scroll position
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 1) {
       // If page is scrolled, hide social icons
       socialIcons.forEach((icon) => {
         icon.style.opacity = "0";
@@ -135,7 +143,8 @@ function checkScroll() {
 // Run checkScroll function when page is scrolled
 window.onscroll = checkScroll;
 
-// Check if screen size is greater than 768px
+function mobile () {
+  // Check if screen size is greater than 768px
 if (window.matchMedia("(min-width: 768px)").matches) {
   // If media query matches
   let hamburger = document.querySelector(".hamburger-menu");
@@ -149,6 +158,8 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   element.classList.add("active");
   rightNav.classList.add("overlay")
 }
+}
+
 
 // Call checkScroll function when the page is loaded
 checkScroll();
@@ -158,3 +169,4 @@ window.addEventListener("resize", checkScroll);
 
 // Call checkScroll function when the page is scrolled
 window.addEventListener("scroll", checkScroll);
+window.addEventListener("scroll", mobile);
