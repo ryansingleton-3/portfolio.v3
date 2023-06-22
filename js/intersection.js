@@ -1,5 +1,5 @@
 // Select all .project-div, video, and heading elements on the page
-const elements = document.querySelectorAll('.project-div, video, h1, h2, h3, h4, h5, h6, p, #headshot-img, .social-icon, #email, .tab-content, .achievements, #tab-list-container, #tab-content-container, #education-tab-list-container, #education-tab-content-container, .certificates, .certificate-list, .btn');
+const elements = document.querySelectorAll('.project-div, video, h1, h2, h3, h4, h5, h6, p, #headshot-img, .social-icon, #email, .tab-content, .achievements, #tab-list-container, #tab-content-container, #education-tab-list-container, #education-tab-content-container, .certificates, .certificate-list, .btn, .technology-btn');
 
 // Define the options for the Intersection Observer
 const options = {

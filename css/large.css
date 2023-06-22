@@ -500,12 +500,11 @@
         position: relative;
         margin-top: 15%;
         margin-left: 15%;
-        max-width: 70%;
-        /* border: 1px solid white; */
+        max-width: 60%;
     }
 
     #tab-content-container {
-        max-width: 80%;
+        width:  75%;
         max-height: 100%;
         border-left: 1px solid var(--yellow-200);
         padding-left: 3%;
@@ -515,25 +514,21 @@
     
     .tab-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items:start;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
     }
     
     #tab-list-container {
         max-height: 100%;
         transition: all 1s ease;
-        min-width: 25%;
+        width: 25%;
         margin-top: 0;
         
     }
     
-    .tab-container {
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-      }
       
     .tab-list {
         display: flex;
@@ -621,36 +616,39 @@
     
     /* -------------------------------------------------------------------- */
     
-    .education-tab-container {
-        display: flex;
-        justify-content: space-between;
-        align-items:start;
-    }
+    
 
     ul {
         display: block;
         list-style-type: disc;
         margin-block-start: 0em;
-        margin-block-end: 1em;
+        margin-block-end: 0em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        padding-inline-start: 40px;
+        padding-inline-start: 20px;
+    }
+
+    .certificate-list {
+        padding-left: none;
+        margin-left: none;
     }
     
     #education-section {
         position: relative;
         margin-top: 15%;
         margin-left: 20%;
-        max-width: 70%;
+        max-width: 60%;
     }
     
     .education-tab-container {
-        max-width: 100%;
-        margin: 0 auto;
+        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center;
+        justify-content: center; */
         flex-direction: row;
+        display: flex;
+        align-items:start;
+        justify-content: space-evenly;
       }
       
     .education-tab-list {
@@ -728,7 +726,8 @@
     
     #education-tab-content-container {
         max-width: 80%;
-        max-height: 100%;
+        height: 100%;
+        max-height: none;
         border-right: 1px solid var(--yellow-200);
         padding-right: 3%;
         transition: all 1s ease;
@@ -812,6 +811,29 @@
         color: white;
         box-sizing: border-box; /* include border and padding in the element's total width and height */
         font-size: 1.3rem;
+    }
+
+    .technology-btn {
+        max-height: 50px;
+        /* max-width: 25%; */
+        background-color: transparent;
+        color: var(--cyan-050);
+        border: 1px solid var(--cyan-050);
+        border-radius: 10px;
+        margin-top: 3%;
+        padding: 2%;
+        transition: all 1s ease; /* "all" will apply the transition to all properties */
+        box-sizing: border-box;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        font-family: var(--body-font);
+        font-size: 1rem;
+    
+    }
+
+    .technology-btn:hover {
+        transform: translate(-5px, -5px); /* moves the button up and to the left */
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
     }
     
 }
