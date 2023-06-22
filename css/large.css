@@ -355,19 +355,21 @@
     
     .text-div-right, .text-div-left {
         position: absolute; /* Add this to allow the text to overlap the video */
-        top: 0; /* Position the text at the top of the .project-div */
         z-index: 2; /* Ensure the text is above the video */
-        width: 40%; /* Add this to make the text take up half the space */
+        width: 35%; /* Add this to make the text take up half the space */
         text-align: center; /* Add this to center the text */
+        align-items: center;
 
     }
     
     .text-div-right {
         right: 0; /* Position the text at the right of the .project-div */
+        margin-left: 10%;
     }
     
     .text-div-left {
         left: 0; /* Position the text at the left of the .project-div */
+        margin-right: 10%;
     }
 
     .text-div-right p, .text-div-left p {
@@ -623,6 +625,16 @@
         display: flex;
         justify-content: space-between;
         align-items:start;
+    }
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 0em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
     }
     
     #education-section {
