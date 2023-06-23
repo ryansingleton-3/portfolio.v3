@@ -841,8 +841,8 @@ footer p {
     max-height: 30px;
     /* max-width: 25%; */
     background-color: transparent;
-    color: var(--cyan-050);
-    border: 1px solid var(--cyan-050);
+    color: var(--cyan-200);
+    border: 1px solid var(--cyan-200);
     border-radius: 10px;
     margin-top: 3%;
     padding: 2%;
@@ -853,6 +853,16 @@ footer p {
     font-family: var(--body-font);
     font-size: 0.8rem;
 
+}
+
+.technology-div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    
+    
 }
 
 .technology-btn:hover {
