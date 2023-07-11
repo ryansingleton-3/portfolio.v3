@@ -1087,4 +1087,8 @@ footer p {
     text-align: center;
     transition: opacity 1s ease; /* Animate the opacity property */
   }
+
+  #last-visit {
+    margin: 0 auto;
+  }
 }
