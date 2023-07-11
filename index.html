@@ -24,7 +24,7 @@
         </button>
         <div id="right-side-nav" class="overlay">
             <div id="btn-div">
-                <button class="btn"><a href="./CV-Ryan_Singleton.pdf" target="_blank" id="resume-btn">Resume</a></button>
+                <button class="btn"><a href="./Ryan_CV.pdf" target="_blank" id="resume-btn">Resume</a></button>
             </div>
             <ul id="nav-ul">
                 <li>
@@ -38,6 +38,9 @@
                 </li>
                 <li>
                     <a class="nav-item" href="#education-section">Education</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#review-section">Testimonials</a>
                 </li>
                 <li>
                     <a class="nav-item" href="#contact-section">Contact</a>
@@ -85,11 +88,12 @@
                 </p>
             </div>
             <div id="about-img-div">
-                <img id="headshot-img" src="images/Ryan_Headshot_real_square.png">
+                <img id="headshot-img" src="images/Ryan_Headshot_real_square.png" alt="Ryan Singleton Headshot">
             </div>
         </div>
         
     </section>
+    
     <section id="work-section">
         <h3>My Work</h3>
         <div class="project-div">
@@ -111,11 +115,9 @@
         </div>
         <div class="project-div">
             <div class="text-div-left">
-                <p>Search Term Analyzer App - specifically designed for Amazon advertisers. By uploading "Customer Search Term" reports
-                    and specifying brand terms and products, the app utilizes Python and Pandas data frames to analyze the data. It provides comprehensive
-                    insights into advertising expenditure and profitability, offering information on ad type, match type, manual versus auto campaigns,
-                    branded versus non-branded terms, and keyword versus product targeting. The app generates a new Excel file with the analyzed data, 
-                    saving hundreds of hours of time that would otherwise be spent compiling data manually.
+                <p>Search Term Analyzer App: Streamline Amazon advertising. Upload reports, specify brand terms.
+                     Automate data analysis with Python and Pandas. Get insights on ad spend, profitability. Saves hundreds
+                     of hours of manual data analysis.
                 </p>
                 <div class="technology-div">
                     <button class="technology-btn">Python</button>
@@ -161,11 +163,15 @@
             </div>
             <div id="tab-content-container">
                 <div class="tab-content active" id="tab-1">
-                    <h4><span class="company-span">Programmer / Digital Marketing Specialist</span> @ OMG Commerce</h4>
+                    <h4><span class="company-span">Developer / Digital Marketing Specialist</span> @ OMG Commerce</h4>
                     <p class="date">Jan 2021 - Present</p>
                     <ul class="achievements">
-                      <li>Created and deployed a cutting-edge application that effectively assessed comprehensive advertising accounts using JavaScript, pinpointing optimization opportunities and driving tangible results. Significantly boosted reporting efficiency by a minimum of 20% department-wide.</li>
-                      <li>Created a user-friendly app (Search Term App, referenced above) using Python, which significantly enhanced reporting efficiency across the department and generated time savings of 5 hours per week, per employee on average.</li>
+                      <li>Developed and launched a JavaScript application that assessed advertising accounts,
+                        enhancing reporting efficiency by at least 30% across the department.</li>
+                        <li>Developed a Python-based Search Term App, boosting departmental efficiency and
+                        saving each employee in the department an average of 5 hours weekly.</li>
+                        <li>Developed an efficient script to automate the calculation and reporting of companywide goals and initiatives, resulting in a monthly time-saving of approximately 3
+                        hours for the finance team.</li>
                     </ul>
                     <div class="technology-div">
                     <button class="technology-btn">HTML</button>                
@@ -217,10 +223,9 @@
                   </div>
             </div>
             
-          </div>
+        </div>
           <!-- Add more experience entries as needed -->
       
-        </div>
     </section>      
     <section id="education-section">
         <h3>Education</h3>
@@ -320,19 +325,27 @@
           </div>
 
     </section>
+    <section id="review-section">
+        <div class="review-container">
+          <button id="prev-button" class="carousel-button arrow-button left"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></button>
+          <div id="reviews-list"></div>
+          <button id="next-button" class="carousel-button arrow-button right"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
+          <div id="review-indicators" class="review-indicators"></div>
+        </div>
+      </section>
+      
+    
     <section id="contact-section">
         <h3>Contact</h3>
             <p>I am currently open to collaborate on new projects. Let's chat!</p>
             <button id="hello-btn" type="submit" class="btn"><a href="mailto:ryanbsingleton3@gmail.com" id="say-hello-a" target="_blank">Say Hello</a></button>
-        </section>
     </section>
-    <section id="github-section">
-
-    </section>
+   
 
     <footer>
         <p>&copy; 2023 Ryan Singleton. All rights reserved.</p>
     </footer>
+    <script src="./js/reviews.js"></script>
     <script src="./js/intersection.js"></script>
     <script src="./js/listeners.js"></script>
 </body>
