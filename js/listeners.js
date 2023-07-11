@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("nav ul li a, .inline-link");
-  let overlay = document.querySelector(".overlay")
+  let overlay = document.querySelector(".overlay");
   let navMenu = document.querySelector("#right-side-nav"); // Add this line
+  navMenu.style.opacity = "1";
   
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -78,8 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
 
 // Check if screen size is less than 768px
 let isSmallScreen = window.matchMedia("(max-width: 768px)");
@@ -114,8 +113,7 @@ window.addEventListener("resize", function () {
 
 // Function to hide or show social icons
 function checkScroll() {
-  let socialIcons = document.querySelectorAll(".social-icon")
-  console.log(window.pageYOffset); // Add this line
+  let socialIcons = document.querySelectorAll(".social-icon");
   if (window.matchMedia("(min-width: 768px)").matches) {
     // If screen width is larger than 768px, always show social icons
     socialIcons.forEach((icon) => {
@@ -143,23 +141,22 @@ function checkScroll() {
 // Run checkScroll function when page is scrolled
 window.onscroll = checkScroll;
 
-function mobile () {
+function mobile() {
   // Check if screen size is greater than 768px
-if (window.matchMedia("(min-width: 768px)").matches) {
-  // If media query matches
-  let hamburger = document.querySelector(".hamburger-menu");
-  let rightNav = document.querySelector("#right-side-nav")
-  hamburger.classList.remove("active");
-  rightNav.classList.remove("overlay")
-} else {
-  // If media query does not match
-  let element = document.querySelector(".hamburger-menu");
-  let rightNav = document.querySelector("#right-side-nav")
-  element.classList.add("active");
-  rightNav.classList.add("overlay")
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    // If media query matches
+    let hamburger = document.querySelector(".hamburger-menu");
+    let rightNav = document.querySelector("#right-side-nav");
+    hamburger.classList.remove("active");
+    rightNav.classList.remove("overlay");
+  } else {
+    // If media query does not match
+    let element = document.querySelector(".hamburger-menu");
+    let rightNav = document.querySelector("#right-side-nav");
+    element.classList.add("active");
+    rightNav.classList.add("overlay");
+  }
 }
-}
-
 
 // Call checkScroll function when the page is loaded
 checkScroll();
