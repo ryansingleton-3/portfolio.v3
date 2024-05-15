@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <title>Ryan Singleton</title>
+</head>
+<body>
+    <nav>
+        <div id="logo-div">
+            <img src="images/logo.png" id="logo-img" alt="Ryan Singleton Logo">
+        </div>
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div id="right-side-nav" class="overlay">
+            <div id="btn-div">
+                <button class="btn"><a href="./Ryan_Singleton_Resume.pdf" target="_blank" id="resume-btn">Resume</a></button>
+            </div>
+            <ul id="nav-ul">
+                <li>
+                    <a class="nav-item" href="#about-section">About</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#work-section">Work</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#experience-section">Experience</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#education-section">Education</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#review-section">Testimonials</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#contact-section">Contact</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    <div class="side-line left-side">
+        <div class="content">
+          <!-- Add your social links/icons here -->
+          <a href="https://www.linkedin.com/in/ryansingleton3/" target="_blank"><svg id="linkedin" class="social-icon" alt="linkedin logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+          <a href="https://www.facebook.com/ryan.singleton.771/" target="_blank"><svg id="facebook" class="social-icon"alt="facebook logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+          <a href="https://github.com/ryansingleton-3" target="_blank"><svg id="github" class="social-icon" alt="github logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+          <a href="https://instagram/busta_ryan3" target="_blank"><svg id="instagram" class="social-icon" alt="instagram logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        </div>
+      </div>
+      
+      <div class="side-line right-side">
+        <div id="email" class="content">
+            <a href="mailto:ryanbsingleton3@gmail.com" id="email-a">ryanbsingleton3@gmail.com</a>
+        </div>
+      </div>      
+    <section id="hello-section">
+        <p>Hi, my name is</p>
+        <h1>Ryan Singleton. <span id="hand-wave">👋🏻</span></h1>
+        <h2>I build things for the Web.</h2>
+        <p>I am a front end developer that specializes in crafting seamless web experiences.</p>
+        <button id="hello-btn" type="submit" class="btn"><a href="mailto:ryanbsingleton3@gmail.com" id="say-hello-a" target="_blank">Get in Touch</a></button>
+    </section>
+    <section id="about-section">
+        <h3>About Me</h3>
+        <div id="about-container">
+            <div id="about-div">
+                <p>Hi there! I'm Ryan, a tech enthusiast with 2-3 years of experience as a developer, currently working at 
+                    <a href="#experience-section" class="inline-link">MTi Group</a>. My expertise lies in front-end development, where I excel at creating seamless
+                     and engaging web experiences using JavaScript, HTML, CSS, and modern frameworks like React. Recently, I've also expanded my skills into backend 
+                     development, utilizing Node.js, Express, and MongoDB to build full-stack applications.
+                    <br>
+                    <br>
+                    My journey began at <a href="#education-section" class="inline-link">Promineo Tech's</a> boot camp, where I honed my JavaScript and React skills. 
+                    Further education at <a href="#education-section" class="inline-link">Brigham Young University-Idaho</a> introduced me to SQL, PHP, NodeJS, and MongoDB, enriching 
+                    my backend knowledge. Outside of coding, I enjoy playing basketball, reading, and spending time with my family. In a nutshell, I'm a skilled 
+                    front-end developer with growing backend expertise, passionate about crafting efficient and user-friendly applications.
+                </p>
+            </div>
+            
+            <div id="about-img-div">
+                <img id="headshot-img" src="images/Ryan_Headshot_real_square.png" alt="Ryan Singleton Headshot">
+            </div>
+        </div>
+        
+    </section>
+    
+    <section id="work-section">
+        <h3>My Work</h3>
+        <div class="project-div">
+            <div class="video-div">
+                <video class="video" src="videos/CCLN_Shopping.webm" autoplay muted controls></video>
+            </div>
+            <div class="text-div-right">
+                <p class="project-summary">I collaborated with Amazon's Prime Video team to develop a shopping functionality for Candy Cane Lane movie merchandise as part of a 3D immersive experience. Users could walk through a virtual set of the movie and purchase items found in the set, boosting product sales by 30%. Additionally, I implemented a themed scavenger hunt that attracted thousands of new users to Amazon’s social channels. <a href="https://amzn-ccln-public.s3.us-west-1.amazonaws.com/ccln-latest/index.html?media-index=3&hide-components-tags=welcome&ref_=atv_dp_exp_271_fr_0-1_link">(See full VR Experience)</a>
+                </p>
+                <div class="technology-div">
+                    <button class="technology-btn">HTML</button>
+                    <button class="technology-btn">CSS</button>
+                    <button class="technology-btn">JavaScript</button>
+                    <button class="technology-btn">NodeJS</button>
+                    <button class="technology-btn">AWS</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-div">
+            <div class="video-div" id="middle-video-div">
+                <video class="video" src="videos/metric_mind.mov" autoplay muted controls></video>
+            </div>
+            <div class="text-div-left">                
+                <p>I developed Metric Mind, an upcoming app offering the most detailed Amazon advertising insights on the market. Users can upload ad reports for comprehensive performance breakdowns, saving advertisers time. Built with React and Node.js/Express, it includes data visualizations and an API I developed to connect to a MongoDB database. An upcoming feature will automate ad account connections, eliminating the need for manual uploads.
+                </p>
+                <div class="technology-div">
+                    <button class="technology-btn">HTML</button>
+                    <button class="technology-btn">Tailwind CSS</button>
+                    <button class="technology-btn">JavaScript</button>
+                    <button class="technology-btn">React</button>
+                    <button class="technology-btn">NodeJS</button>
+                    <button class="technology-btn">Express</button>
+                    <button class="technology-btn">MongoDB</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-div">
+            <div class="text-div-right">
+                <p>I developed an e-commerce website from scratch for <a href="https:/www.shop.mtigroup.com.au">MTi GROUP</a>, handling all aspects of design, planning, and implementation. I utilized JavaScript, HTML, CSS, Tailwind CSS, and Shopify's Liquid templating language to create a fully functional and visually appealing site. I took and edited over 500 product images and created over 100 graphics for the site using Adobe Photoshop, Lightroom, and Illustrator. Additionally, I managed the marketing efforts, creating flyers, product inserts, packaging designs, and LinkedIn posts. I also oversaw the supply chain, sourcing, and managing relationships with vendors for over 250 new products.
+                </p>
+                <div class="technology-div">
+                    <button class="technology-btn">JavaScript</button>
+                    <button class="technology-btn">HTML</button>
+                    <button class="technology-btn">CSS</button>
+                    <button class="technology-btn">Tailwind CSS</button>
+                    <button class="technology-btn">Liquid</button>
+                    <button class="technology-btn">Adobe Photoshop</button>
+                    <button class="technology-btn">Adobe Lightroom</button>
+                    <button class="technology-btn">Adobe Illustrator</button>
+
+                </div>
+            </div>
+            <div class="video-div" >
+                <video class="video" src="videos/MTI_Website.mov" autoplay muted controls></video>
+                <!-- <iframe class="video" src="https://youtu.be/qZvaqlEA7qg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            </div>
+        </div>
+        
+    </section>
+    
+    <section id="experience-section">
+        <h3>Experience</h3>
+        <div class="tab-container">
+            <div id="tab-list-container">
+                <ul class="tab-list">
+                    <li class="tab-item active" data-tab="tab-1">LightSail VR</li>
+                    <li class="tab-item" data-tab="tab-2">MTi Group</li>
+                    <li class="tab-item" data-tab="tab-3">OMG Commerce</li>
+                    <li class="tab-item" data-tab="tab-4">Signature Singleton</li>
+                    <li class="tab-item" data-tab="tab-5">JPMorgan Chase</li>
+                </ul>
+            </div>
+            <div id="tab-content-container">
+                <div class="tab-content active" id="tab-1">
+                    <h4><span class="company-span">Full-Stack JavaScript Developer</span> @ LightSail VR (with Amazon Prime Video)</h4>
+                    <p class="date">Jan 2023 - Present</p>
+                    <ul class="achievements">
+                        <li>Collaborated with Amazon's Prime Video team to develop shopping functionality for Candy Cane Lane movie merchandise in a 3D immersive experience.</li>
+                        <li>Increased Candy Cane Lane product purchases by 30% through in-app shopping.</li>
+                        <li>Implemented a themed scavenger hunt that drove thousands of new users to Amazon’s social channels.</li>
+                        <li>Utilized JavaScript, HTML, CSS, and Tailwind CSS to create a seamless user experience.</li>
+                    </ul>
+                    <div class="technology-div">
+                        <button class="technology-btn">JavaScript</button>
+                        <button class="technology-btn">HTML</button>
+                        <button class="technology-btn">CSS</button>
+                        <button class="technology-btn">NodeJS</button>
+                        <button class="technology-btn">AWS</button>
+                        <button class="technology-btn">3DVista</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-2">
+                    <h4><span class="company-span">Web Developer</span> @ MTi Group</h4>
+                    <p class="date">Mar 2022 - Dec 2022</p>
+                    <ul class="achievements">
+                        <li>Developed an e-commerce website from scratch, handling all aspects of design, planning, and implementation independently.</li>
+                        <li>Took and edited over 500 product images, and created over 100 graphics using Adobe Photoshop, Lightroom, and Illustrator.</li>
+                        <li>Managed marketing efforts by creating flyers, product inserts, packaging designs, and LinkedIn posts.</li>
+                        <li>Utilized JavaScript, HTML, CSS, Tailwind CSS, and Shopify's Liquid templating language for the site.</li>
+                        <li>Oversaw the supply chain for over 250 new products, including sourcing, contacting, and maintaining relationships with vendors.</li>
+                    </ul>
+                    <div class="technology-div">
+                        <button class="technology-btn">JavaScript</button>
+                        <button class="technology-btn">HTML</button>
+                        <button class="technology-btn">CSS</button>
+                        <button class="technology-btn">Tailwind CSS</button>
+                        <button class="technology-btn">Shopify Liquid</button>
+                        <button class="technology-btn">Adobe Photoshop</button>
+                        <button class="technology-btn">Adobe Lightroom</button>
+                        <button class="technology-btn">Adobe Illustrator</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-3">
+                    <h4><span class="company-span">Developer / Digital Marketing Specialist</span> @ OMG Commerce</h4>
+                    <p class="date">Jan 2021 - Present</p>
+                    <ul class="achievements">
+                        <li>Developed and launched a JavaScript application that assessed advertising accounts, enhancing reporting efficiency by at least 30% across the department.</li>
+                        <li>Developed a Python-based Search Term App, boosting departmental efficiency and saving each employee in the department an average of 5 hours weekly.</li>
+                        <li>Developed an efficient script to automate the calculation and reporting of company-wide goals and initiatives, resulting in a monthly time-saving of approximately 3 hours for the finance team.</li>
+                    </ul>
+                    <div class="technology-div">
+                        <button class="technology-btn">HTML</button>
+                        <button class="technology-btn">JavaScript</button>
+                        <button class="technology-btn">Google Apps Scripts</button>
+                        <button class="technology-btn">Python</button>
+                        <button class="technology-btn">Google Data Studio</button>
+                        <button class="technology-btn">SQL</button>
+                        <button class="technology-btn">Google Marketing Cloud</button>
+                        <button class="technology-btn">Amazon Marketing Cloud</button>
+                        <button class="technology-btn">Amazon Advertising API</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-4">
+                    <h4><span class="company-span">President</span> @ Signature Singleton L.L.C.</h4>
+                    <p class="date">Nov 2018 - Feb 2022</p>
+                    <p>Signature Singleton L.L.C. is an online retail company that operates on Amazon.com. We offer a wide range of high-quality products to consumers and utilize Amazon's fulfillment services for fast and reliable delivery, as well as excellent customer support.</p>
+                    <ul class="achievements">
+                        <li>Used Amazon Seller Central to assess business needs, optimize areas of improvement, view and generate sales reports, open cases, create and edit shipments, and ensure customer satisfaction.</li>
+                        <li>Constantly listed, monitored, and analyzed new and existing ASINs while utilizing strategies to improve and maintain product rankings.</li>
+                        <li>Used AMS (Amazon Marketing Services) and sponsored products to boost ASIN performance and overall profitability. *Amazon Ads Certified*</li>
+                        <li>Worked with brands to boost sales by optimizing listings through descriptions and images.</li>
+                        <li>Prioritized and demonstrated great time management to ensure continuous progress and growth. Graduate of the Wholesale Academy (Larry Lubarsky/Watch Me Amazon's FBA Course).</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="tab-5">
+                    <h4><span class="company-span">Bilingual Fraud Specialist</span> @ JPMorgan Chase & Co.</h4>
+                    <p class="date">Dec 2022 - Present</p>
+                    <ul class="achievements">
+                        <li>Engaged in interactive dialogue with customers through active listening.</li>
+                        <li>Determined customer needs and provided appropriate solutions through relationship building.</li>
+                        <li>Used effective verbal and written communications with both external and internal customers.</li>
+                        <li>Effectively prioritized work to ensure efficiency in a fast-paced environment.</li>
+                        <li>Abided by all applicable regulatory and department practices and procedures.</li>
+                        <li>Became familiar and fluent with all Windows Operating Systems and Microsoft Office Tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Add more experience entries as needed -->
+    </section>
+          
+    <section id="education-section">
+        <h3>Education</h3>
+        <div class="education-tab-container">
+            <div id="education-tab-list-container">
+                <ul class="education-tab-list">
+                    <li class="education-tab-item active" data-tab="education-tab-1">Promineo Tech</li>
+                    <li class="education-tab-item" data-tab="education-tab-2">BYU-Idaho</li>
+                    <li class="education-tab-item" data-tab="education-tab-3">Codecademy</li>
+                    <li class="education-tab-item" data-tab="education-tab-4">Columbus State Community College</li>
+                  </ul>
+            </div>
+            <div id="education-tab-content-container">
+                <div class="education-tab-content active" id="education-tab-1">
+                    <h4><span class="company-span">Front End Software Development</span> Bootcamp</h4>
+                    <p class="date">Mar 2022 - Jul 2022</p>
+                    <ul class="achievements">
+                        <li>Algorithms & Object Oriented Programming</li>
+                        <li>Design Patterns & Unit Testing</li>
+                        <li>Version Control, Responsive Web Design, & more</li>
+                    </ul>
+                    <div class="technology-div">
+                        <button class="technology-btn">JavaScript</button>
+                        <button class="technology-btn">ES6</button>
+                        <button class="technology-btn">HTML</button>
+                        <button class="technology-btn">CSS</button>
+                        <button class="technology-btn">Bootstrap</button>
+                        <button class="technology-btn">jQuery</button>
+                        <button class="technology-btn">AJAX</button>
+                        <button class="technology-btn">Git</button>
+                        <button class="technology-btn">JSX</button>
+                        <button class="technology-btn">NPM</button>
+                        <button class="technology-btn">Redux</button>
+                        <button class="technology-btn">AWS</button>
+                    </div>
+                  </div>
+                  <div class="education-tab-content" id="education-tab-2">
+                      <h4>Bachelor's Degree in <span class="company-span">Information Technology</span></h4>
+                      <p class="date">Nov 2018 - Feb 2022</p>
+                      <p>Certficates in:</p>
+                      <ul class="certificate-list">
+                        <li><span class="certificates">&#x2713;</span> Web & Computer Programming</li>
+                        <li><span class="certificates">&#x2713;</span> Web Development</li>
+                        <li><span class="certificates">⏳</span> Software Development</li>
+                        <li>Conversion of Software Requirement into Code</li>
+                        <li>Development of Dynamic Webpages & Programs</li>
+                        <li>Object Oriented Programming - Programming with Classes</li>                        
+                        <li>Develop Design & Problem-Solving Skills</li>
+                        <li>Develop Strong Communication & Interpersonal Skills</li>
+                      </ul>
+                      <div>
+                        <div class="technology-div">
+                            <button class="technology-btn">JavaScript</button>                
+                            <button class="technology-btn">HTML</button>
+                            <button class="technology-btn">CSS</button>
+                            <button class="technology-btn">Angular</button>
+                            <button class="technology-btn">NodeJS</button>
+                            <button class="technology-btn">Express</button>
+                            <button class="technology-btn">Python</button>
+                            <button class="technology-btn">C#</button>
+                            <button class="technology-btn">PHP</button>
+                            <button class="technology-btn">Git</button>
+                            <button class="technology-btn">SQL</button>
+                            <button class="technology-btn">MariaDB</button>
+                            <button class="technology-btn">MongoDB</button>
+                            
+                        </div>
+                    </div>
+                      <!-- <ul class="achievements">
+                      </ul> -->
+                  </div>
+                  <div class="education-tab-content" id="education-tab-3">
+                    <h4><span class="company-span">Front End Software Engineer</span> Career Path</h4>
+                      <p class="date">Sep 2021 - Mar 2022</p>
+                      <ul class="achievements">
+                        <li>Web Foundations</li>
+                        <li>Improved Styling with CSS</li>
+                        <li>Building Ineractive Websites</li>
+                        <li>Front-End Development</li>
+                      </ul>
+                      <div class="technology-div">
+                        <button class="technology-btn">HTML</button>
+                        <button class="technology-btn">CSS</button>                        
+                        <button class="technology-btn">JavaScript</button>
+                        <button class="technology-btn">React</button>
+                        <button class="technology-btn">REST API</button>
+                        <button class="technology-btn">Git</button>
+                        <button class="technology-btn">Github</button>
+                    </div>
+                  </div>
+                  <div class="education-tab-content" id="education-tab-4">
+                    <h4>Associate's Degree in <span class="company-span">Business Management</span></h4>
+                    <p class="date">Jan 2018 - Jan 2021</p>
+                    <ul class="achievements">
+                        <li>Dean's List from 2018-2021</li>
+                        <li>Studied Business Management</li>
+                        <li>3.7 GPA</li>
+                    </ul>
+                  </div>
+            </div>
+            
+          </div>
+
+    </section>
+    <section id="review-section">
+        <div class="review-container">
+          <button id="prev-button" class="carousel-button arrow-button left"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></button>
+          <div id="reviews-list"></div>
+          <button id="next-button" class="carousel-button arrow-button right"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
+          <div id="review-indicators" class="review-indicators"></div>
+        </div>
+      </section>
+      
+    
+    <section id="contact-section">
+        <h3>Contact</h3>
+            <p>I am currently open to collaborate on new projects. Let's chat!</p>
+            <button id="hello-btn" type="submit" class="btn"><a href="mailto:ryanbsingleton3@gmail.com" id="say-hello-a" target="_blank">Say Hello</a></button>
+    </section>
+   
+
+    <footer>
+        <p id="last-visit"></p>
+        <p>&copy; 2023 Ryan Singleton. All rights reserved.</p>
+    </footer>
+    <script src="./js/reviews.js"></script>
+    <script src="./js/intersection.js"></script>
+    <script src="./js/listeners.js"></script>
+</body>
+
+</html>

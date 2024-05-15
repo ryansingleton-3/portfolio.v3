@@ -1,0 +1,1094 @@
+:root {
+  /* Primary */
+  --cyan-050: #e0fcff;
+  --cyan-100: #bef8fd;
+  --cyan-200: #87eaf2;
+  --cyan-300: #54d1db;
+  --cyan-400: #38bec9;
+  --cyan-500: #2cb1bc;
+  --cyan-600: #14919b;
+  --cyan-700: #0e7c86;
+  --cyan-800: #0a6c74;
+  --cyan-900: #044e54;
+
+  /* Neutrals */
+  --grey-050: #f0f4f8;
+  --grey-100: #d9e2ec;
+  --grey-200: #bcccdc;
+  --grey-300: #9fb3c8;
+  --grey-400: #829ab1;
+  --grey-500: #627d98;
+  --grey-600: #486581;
+  --grey-700: #334e68;
+  --grey-800: #243b53;
+  --grey-900: #102a43;
+
+  /* Supporting */
+  --indigo-050: #e0e8f9;
+  --indigo-100: #bed0f7;
+  --indigo-200: #98aeeb;
+  --indigo-300: #7b93db;
+  --indigo-400: #647acb;
+  --indigo-500: #4c63b6;
+  --indigo-600: #4055a8;
+  --indigo-700: #35469c;
+  --indigo-800: #2d3a8c;
+  --indigo-900: #19216c;
+
+  --pink-050: #ffe0f0;
+  --pink-100: #fab8d9;
+  --pink-200: #f191c1;
+  --pink-300: #e668a7;
+  --pink-400: #da4a91;
+  --pink-500: #c42d78;
+  --pink-600: #ad2167;
+  --pink-700: #9b1b5a;
+  --pink-800: #781244;
+  --pink-900: #5c0b33;
+
+  --red-050: #ffeeee;
+  --red-100: #facdcd;
+  --red-200: #f29b9b;
+  --red-300: #e66a6a;
+  --red-400: #d64545;
+  --red-500: #ba2525;
+  --red-600: #a61b1b;
+  --red-700: #911111;
+  --red-800: #780a0a;
+  --red-900: #610404;
+
+  --yellow-050: #fffaeb;
+  --yellow-100: #fcefc7;
+  --yellow-200: #f8e3a3;
+  --yellow-300: #f9da8b;
+  --yellow-400: #f7d070;
+  --yellow-500: #e9b949;
+  --yellow-600: #c99a2e;
+  --yellow-700: #a27c1a;
+  --yellow-800: #7c5e10;
+  --yellow-900: #513c06;
+
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--grey-900);
+  color: var(--cyan-500);
+}
+
+/* section {
+    border: 1px solid black;
+} */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--body-font);
+}
+
+.hamburger-menu {
+  display: flex; /* Visible by default */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  position: fixed; /* Add this line */
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+}
+
+.hamburger-menu div {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--cyan-300); /* Change to desired color */
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+#right-side-nav {
+  display: none; /* Hidden by default */
+}
+
+/* Other CSS rules remain the same */
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: last baseline;
+}
+
+.overlay.active {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay #nav-ul {
+  text-align: center;
+  margin-top: 30px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0; /* Add this line */
+  margin: 0 auto; /* Add this line */
+  margin-bottom: 30%;
+}
+
+.overlay #nav-ul li {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.overlay #nav-ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: 3rem;
+}
+
+.overlay #btn-div {
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* Rest of your CSS */
+
+#right-side-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3%;
+}
+
+.btn,
+.dropdown-btn {
+  min-width: 120px;
+  min-height: 50px;
+  border-radius: 10px;
+  border: 2px solid white; /* set initial border color and thickness */
+  transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+  position: relative; /* make the button's position relative to allow moving it */
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box; /* include border and padding in the element's total width and height */
+  font-size: 1.3rem;
+}
+
+.btn:hover,
+.dropdown-btn:hover {
+  border-bottom: 10px solid white; /* increase bottom border thickness on hover */
+  border-right: 10px solid white; /* increase right border thickness on hover */
+  transform: translate(-5px, -5px); /* moves the button up and to the left */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+#btn-div {
+  display: flex;
+  align-items: center;
+}
+
+/* ul {
+    margin-right: 10px;
+} */
+
+#hello-section {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 30vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 10px;
+  color: var(--cyan-200);
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: var(--cyan-400);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p, ul li {
+  font-size: 0.8rem;
+  font-family: var(--body-font);
+  color: var(--cyan-400);
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#hand-wave {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  animation-timing-function: linear;
+}
+
+#hand-wave:hover {
+  animation-name: wave-animation;
+  animation-duration: 3s;
+}
+
+a {
+  color: var(--cyan-500);
+  font-family: var(--body-font);
+}
+
+#hello-section p:last-of-type {
+  color: var(--cyan-500);
+  font-size: 1rem;
+}
+
+#about-section {
+  /* border: 1px solid white; */
+  position: relative;
+  margin-top: 50vh;
+  margin-left: 10%;
+  max-width: 80%;
+}
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#about-div {
+  max-width: 100%;
+  min-width: 35%;
+}
+
+#about-div p {
+  color: var(--cyan-300);
+  font-size: 0.8rem;
+}
+
+#about-img-div {
+  max-width: 90%;
+  max-height: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#about-img-div img {
+  border-radius: 10px;
+  /* transition: all 0.3s ease; "all" will apply the transition to all properties */
+  position: relative; /* make the button's position relative to allow moving it */
+}
+
+#about-img-div img:hover {
+  transform: translate(-10px, -10px); /* moves the button up and to the left */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+#headshot-img {
+  max-width: 100%;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 2s ease-out; /* Animate the opacity property */
+}
+
+#work-section {
+  position: relative;
+  margin-top: 50vh;
+  margin-left: 10%;
+  margin-bottom: 50vh;
+  max-width: 80%;
+  /* border: 1px solid white; */
+}
+
+.project-div {
+  display: flex; /* Add this to use Flexbox */
+  flex-direction: column;
+  justify-content: space-between; /* Add this to put space between your items */
+  position: relative; /* Add this to establish a new positioning context for children */
+  /* border: 1px solid white; */
+  align-items: center; /* Add this to vertically center the video and text */
+  margin: 10% 0px 30% 0px;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 1s ease-out; /* Animate the opacity property */
+}
+
+.project-div.visible {
+  transform: translateX(0); /* Move to original position */
+  opacity: 1; /* Become fully opaque */
+}
+
+.video-div {
+  position: relative; /* Add this to allow z-index and transform to work */
+  max-width: 85%;
+  flex: 1; /* Add this to make the video take up half the space */
+}
+
+.video {
+  width: 100%; /* Change this to make the video take up the full width of the .video-div */
+  opacity: 0.5; /* Add this to make the video greyed out */
+  transition: all 0.5s ease; /* Add this to animate changes */
+  border-radius: 10px;
+}
+
+.video:hover {
+  opacity: 1; /* On hover, make the video fully opaque */
+  transform: translate(
+    -10px,
+    -10px
+  ); /* On hover, move the video up and to the left */
+  /* border-bottom: 5px solid white;
+    border-right: 5px solid white; */
+}
+
+.text-div-right,
+.text-div-left {
+  width: 100%; /* Add this to make the text take up half the space */
+  text-align: center; /* Add this to center the text */
+}
+
+.video-div {
+  order: 1;
+}
+
+.text-div-right,
+.text-div-left {
+  order: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* opacity: 0; 
+    transition: opacity 2s ease-out;  */
+  font-family: var(--heading-font);
+}
+
+p {
+  /* opacity: 0; 
+    transition: opacity 1s ease-out;  */
+  font-family: var(--body-font);
+  color: var(--cyan-500);
+}
+
+.inline-link {
+  color: var(--yellow-300);
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  color: var(--yellow-300);
+  text-decoration: underline;
+}
+
+#logo-img {
+  border-radius: 10px;
+  max-width: 20%;
+}
+
+.side-line {
+  position: fixed;
+  bottom: 0;
+  width: 1px;
+  background-color: var(
+    --cyan-500
+  ); /* Change this to the color you want for the line */
+}
+
+.left-side {
+  left: 5%;
+  height: 30vh;
+}
+
+.right-side {
+  right: 5%;
+  height: 15vh;
+}
+
+.content {
+  position: absolute;
+  top: -20px; /* Adjust this value to position your content above the line */
+  white-space: nowrap;
+  color: var(
+    --cyan-500
+  ); /* Change this to the color you want for the content */
+  font-size: 1.3rem; /* Adjust this value to change the size of the content */
+  /* Add additional styling for your content here */
+}
+
+#email {
+  /* existing styles */
+
+  /* add the following line */
+  writing-mode: vertical-rl;
+  transform: rotate(360deg);
+  position: fixed;
+  top: 50%;
+  right: 4.5%;
+  transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+  border-radius: 10px;
+}
+
+#email:hover {
+  transform: translate(-10px, -10px); /* moves the button up and to the left */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+#email-a {
+  opacity: 1;
+  color: var(--cyan-400);
+  text-decoration: none;
+}
+
+#linkedin {
+  position: fixed;
+  left: 25vw;
+}
+
+#facebook {
+  position: fixed;
+  left: 55vw;
+}
+
+#github {
+  position: fixed;
+  left: 40vw;
+}
+
+#instagram {
+  position: fixed;
+  left: 70vw;
+}
+
+.social-icon {
+  fill: var(--cyan-200);
+  height: 1em;
+  position: absolute;
+  top: 3vh;
+  left: 50vw;
+  transition: opacity 1s, visibility 1s;
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+}
+
+.social-icon:hover {
+  transform: translate(-5px, -5px); /* moves the button up and to the left */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+#experience-section {
+  position: relative;
+  margin-top: 15%;
+  margin-left: 10%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50vh;
+  /* border: 1px solid white; */
+}
+
+.tab-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Change this to column */
+  align-items: center;
+  justify-content: center;
+}
+
+#tab-content-container {
+  max-width: 100%;
+  max-height: 100%;
+  border-top: 1px solid var(--yellow-200);
+  padding-left: 3%;
+  transition: all 1s ease;
+  order: 2;
+}
+
+#tab-list-container {
+  /* border: 1px solid yellow; */
+  margin-top: 3%;
+  transition: all 1s ease;
+  min-width: 25%;
+  order: 1;
+  display: block;
+  max-width: 100%;
+}
+
+.tab-list {
+  display: flex; /* Add this to make the list items appear in a row */
+  flex-direction: row; /* Add this to make the list items appear in a row */
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+/* Rest of your CSS */
+
+.tab-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+.tab-list li {
+  margin-right: 3%;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--cyan-300);
+  transition: all 0.6s ease; /* "all" will apply the transition to all properties */
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.tab-list li.active {
+  /* border: 1px solid var(--yellow-300); */
+  border-radius: 5px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-item.active {
+  border: 1px solid var(--yellow-200);
+  padding: 1%;
+  margin: 0 2%;
+  /* padding: 10%; */
+}
+
+.tab-content.active {
+  display: block;
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.tab-list li:hover {
+  transform: translate(-5px, -5px); /* moves the button up and to the left */
+  /* adds a shadow to create the "lifted" effect */
+}
+
+.tab-content ul li {
+  margin-bottom: 3%;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+
+.tab-content ul li::before {
+  content: "";
+  position: absolute;
+  /* top: 3%; */
+  left: 0;
+  transform: translateY(70%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+  border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+}
+
+.achievements {
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+  position: relative;
+}
+
+.company-span {
+  color: var(--yellow-200);
+}
+
+/* -------------------------------------------------------------------- */
+
+#education-section {
+  position: relative;
+  margin-top: 15%;
+  margin-left: 10%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40vh;
+  /* border: 1px solid white; */
+}
+
+.education-tab-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Change this to column */
+  align-items: center;
+  justify-content: center;
+}
+
+#education-tab-content-container {
+  width: 100%;
+  max-height: 100%;
+  border-top: 1px solid var(--yellow-200);
+  padding-left: 3%;
+  transition: all 1s ease;
+  order: 2;
+}
+
+#education-tab-list-container {
+  /* border: 1px solid yellow; */
+  margin-top: 3%;
+  transition: all 1s ease;
+  min-width: 25%;
+  order: 1;
+  display: block;
+  max-width: 100%;
+}
+
+.education-tab-list {
+  display: flex; /* Add this to make the list items appear in a row */
+  flex-direction: row; /* Add this to make the list items appear in a row */
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+/* Rest of your CSS */
+
+.education-tab-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+.education-tab-list li {
+  margin-right: 3%;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--cyan-300);
+  transition: all 0.6s ease; /* "all" will apply the transition to all properties */
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.education-tab-list li.active {
+  /* border: 1px solid var(--yellow-300); */
+  border-radius: 5px;
+}
+
+.education-tab-content {
+  display: none;
+}
+
+.education-tab-item.active {
+  border: 1px solid var(--yellow-200);
+  padding: 1%;
+  margin: 0 2%;
+  /* padding: 10%; */
+}
+
+.education-tab-content.active {
+  display: block;
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.education-tab-list li:hover {
+  transform: translate(-5px, -5px); /* moves the button up and to the left */
+  /* adds a shadow to create the "lifted" effect */
+}
+
+.education-tab-content ul li {
+  margin-bottom: 3%;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+
+.education-tab-content ul li::before {
+  content: "";
+  position: absolute;
+  /* top: 3%; */
+  left: 0;
+  transform: translateY(70%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+  border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+}
+
+.checkmark {
+  color: white;
+}
+
+.certificates {
+  color: white;
+  transition: all 1s ease;
+}
+
+.certificates.active {
+  transition: all 1s ease;
+}
+
+/* --------------------------------------------------------- */
+
+#contact-section {
+  text-align: center;
+  position: relative;
+  margin-top: 50vh;
+  margin-left: 25%;
+  max-width: 50%;
+  margin-bottom: 200px;
+}
+
+#hello-btn {
+  margin-top: 5%;
+  transition: all 1s ease;
+}
+
+footer p {
+  text-align: center;
+  color: var(--cyan-700);
+}
+
+#say-hello-a {
+  text-decoration: none;
+  min-width: 120px;
+  min-height: 50px;
+  transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+  position: relative; /* make the button's position relative to allow moving it */
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box; /* include border and padding in the element's total width and height */
+  font-size: 1.3rem;
+}
+
+#resume-btn {
+  text-decoration: none;
+  min-width: 120px;
+  min-height: 50px;
+  transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+  position: relative; /* make the button's position relative to allow moving it */
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box; /* include border and padding in the element's total width and height */
+  font-size: 1.3rem;
+}
+
+.technology-btn {
+  max-height: 30px;
+  /* max-width: 25%; */
+  background-color: transparent;
+  color: var(--cyan-200);
+  border: 1px solid var(--cyan-200);
+  border-radius: 10px;
+  margin-top: 3%;
+  padding: 2%;
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+  box-sizing: border-box;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+}
+
+.technology-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.technology-btn:hover {
+  transform: translate(-5px, -5px); /* moves the button up and to the left */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+}
+
+.stars {
+  color: #ccc;
+  font-size: 36px;
+}
+
+.star {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 36px;
+  fill: var(--yellow-400);
+}
+
+/* .star:before {
+    content: "\2606";
+}
+
+.star.yellow:before {
+    content: "\2605";
+}
+
+.star.yellow-darker:before {
+    content: "\2605";
+    color: var(--yellow-400);
+} */
+
+.review-section {
+  max-width: 85%;
+  margin-left: 15%;
+  border: 1px solid red;
+  color: var(--cyan-200);
+  border: 1px solid white;
+  opacity: 0;
+}
+
+.review-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 1s ease; /* Animate the opacity property */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+#prev-button {
+  left: 10px;
+}
+
+#next-button {
+  right: 10px;
+}
+
+#reviews-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.review-item {
+  flex: 0 0 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Your existing CSS styles for stars, review-img, review-header, bottom-div, etc. */
+
+.review-img {
+  border-radius: 50%; /* Make the image circular */
+  max-width: 30%;
+  object-fit: cover; /* Ensure the image fills the circular container */
+}
+
+.review-header {
+  order: 4;
+  max-width: 40%;
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  transition: opacity 1s ease; /* Animate the opacity property */
+}
+
+.review-p {
+  color: var(--cyan-200);
+  font-size: 0.8rem;
+  line-height: 23px;
+  text-align: center;
+  transition: opacity 1s ease; /* Animate the opacity property */
+}
+
+.quote-img {
+  fill: var(--cyan-500);
+  height: 4em;
+  transition: opacity 1s, visibility 1s;
+  transition: all 1s ease; /* "all" will apply the transition to all properties */
+}
+
+#review-navigation {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+
+.arrow-button svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cyan-400);
+  transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+}
+
+.arrow-button.right svg:hover {
+  transform: translate(5px, 0); /* moves the button to the right */
+}
+
+.arrow-button.left svg:hover {
+  transform: translate(-5px, 0); /* moves the button to the left */
+}
+
+/* Add styles for review indicators */
+.review-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.review-indicator {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 10px 5px;
+}
+
+.review-indicator.active {
+  background-color: var(--cyan-600);
+}
+
+@media screen and (max-width: 768px) {
+  #email {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+
+  /* #hello-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+  } */
+
+  #hello-section h1,
+  #hello-section h2, 
+  #hello-section p {
+    margin-top: 0;
+  }
+  #hello-section h1 {
+    font-size: 3rem;
+    line-height: 10px;
+    color: var(--cyan-200);
+  }
+
+  #hello-section h2 {
+    font-size: 3rem;
+    line-height: 30px;
+    color: var(--cyan-400);
+  }
+
+  #about-div p {
+    font-size: .8rem;
+  }
+
+  .text-div-right p,
+  .text-div-left p {
+    font-size: .9rem;
+  }
+
+  .review-p {
+    color: var(--cyan-200);
+    font-size: .9rem;
+    line-height: 24px;
+    text-align: center;
+    transition: opacity 1s ease; /* Animate the opacity property */
+  }
+
+  #last-visit {
+    margin: 0 auto;
+  }
+}

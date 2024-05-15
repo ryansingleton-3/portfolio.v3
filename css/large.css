@@ -1,0 +1,1037 @@
+:root {
+  /* Primary */
+  --cyan-050: #e0fcff;
+  --cyan-100: #bef8fd;
+  --cyan-200: #87eaf2;
+  --cyan-300: #54d1db;
+  --cyan-400: #38bec9;
+  --cyan-500: #2cb1bc;
+  --cyan-600: #14919b;
+  --cyan-700: #0e7c86;
+  --cyan-800: #0a6c74;
+  --cyan-900: #044e54;
+
+  /* Neutrals */
+  --grey-050: #f0f4f8;
+  --grey-100: #d9e2ec;
+  --grey-200: #bcccdc;
+  --grey-300: #9fb3c8;
+  --grey-400: #829ab1;
+  --grey-500: #627d98;
+  --grey-600: #486581;
+  --grey-700: #334e68;
+  --grey-800: #243b53;
+  --grey-900: #102a43;
+
+  /* Supporting */
+  --indigo-050: #e0e8f9;
+  --indigo-100: #bed0f7;
+  --indigo-200: #98aeeb;
+  --indigo-300: #7b93db;
+  --indigo-400: #647acb;
+  --indigo-500: #4c63b6;
+  --indigo-600: #4055a8;
+  --indigo-700: #35469c;
+  --indigo-800: #2d3a8c;
+  --indigo-900: #19216c;
+
+  --pink-050: #ffe0f0;
+  --pink-100: #fab8d9;
+  --pink-200: #f191c1;
+  --pink-300: #e668a7;
+  --pink-400: #da4a91;
+  --pink-500: #c42d78;
+  --pink-600: #ad2167;
+  --pink-700: #9b1b5a;
+  --pink-800: #781244;
+  --pink-900: #5c0b33;
+
+  --red-050: #ffeeee;
+  --red-100: #facdcd;
+  --red-200: #f29b9b;
+  --red-300: #e66a6a;
+  --red-400: #d64545;
+  --red-500: #ba2525;
+  --red-600: #a61b1b;
+  --red-700: #911111;
+  --red-800: #780a0a;
+  --red-900: #610404;
+
+  --yellow-050: #fffaeb;
+  --yellow-100: #fcefc7;
+  --yellow-200: #f8e3a3;
+  --yellow-300: #f9da8b;
+  --yellow-400: #f7d070;
+  --yellow-500: #e9b949;
+  --yellow-600: #c99a2e;
+  --yellow-700: #a27c1a;
+  --yellow-800: #7c5e10;
+  --yellow-900: #513c06;
+
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--grey-900);
+    color: var(--cyan-500);
+    max-width: 100%;
+  }
+
+  /* section {
+        border: 1px solid black;
+    } */
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: var(--body-font);
+    max-width: 100%;
+  }
+
+  nav div ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.5s ease; /* Add this to animate changes */
+  }
+
+  nav div img {
+    max-height: 100%;
+  }
+
+  #logo-div {
+    max-width: 100px;
+    margin-left: 2%;
+  }
+
+  #logo-img {
+    max-width: 100%; /* adjust as needed */
+  }
+
+  nav div ul li a {
+    text-decoration: none;
+    color: var(--cyan-300);
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+
+  nav div ul li:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+  }
+
+  #right-side-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 4.5%;
+    opacity: 1 !important;
+  }
+
+  .hamburger-menu {
+    display: none; /* Hide the hamburger menu */
+  }
+
+  .overlay {
+    display: none; /* Hide the overlay */
+  }
+
+  #nav-ul {
+    display: flex; /* Display list items in a row */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+
+  #btn-div {
+    order: 2; /* Move the button to the right */
+  }
+
+  .btn,
+  .dropdown-btn {
+    min-width: 120px;
+    min-height: 50px;
+    border-radius: 10px;
+    border: 2px solid white; /* set initial border color and thickness */
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box; /* include border and padding in the element's total width and height */
+    font-size: 1.3rem;
+  }
+
+  .btn:hover,
+  .dropdown-btn:hover {
+    border-bottom: 10px solid white; /* increase bottom border thickness on hover */
+    border-right: 10px solid white; /* increase right border thickness on hover */
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+  }
+
+  #btn-div {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    margin-right: 10px;
+  }
+
+  #hello-section {
+    position: relative;
+    margin-left: 15%;
+    margin-top: 10%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 10px;
+    color: var(--cyan-200);
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 30px;
+    color: var(--cyan-400);
+  }
+  p {
+    font-size: 1.3rem;
+    font-family: var(--body-font);
+    color: var(--cyan-400);
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  #hand-wave {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    animation-timing-function: linear;
+  }
+
+  #hand-wave:hover {
+    animation-name: wave-animation;
+    animation-duration: 0.8s;
+  }
+
+  a {
+    color: var(--cyan-500);
+    font-family: var(--body-font);
+  }
+
+  #hello-section p:last-of-type {
+    color: var(--cyan-500);
+    font-size: 1.3rem;
+  }
+
+  #about-section {
+    /* border: 1px solid white; */
+    position: relative;
+    margin-top: 30%;
+    margin-left: 20%;
+    max-width: 70%;
+  }
+
+  #about-div {
+    max-width: 40%;
+    min-width: 35%;
+    line-height: 1.5rem;
+  }
+
+  #about-img-div {
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto 0;
+  }
+
+  #about-img-div img {
+    border-radius: 10px;
+    /* transition: all 0.3s ease; "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    max-height: 100%;
+  }
+
+  #about-img-div img:hover {
+    transform: translate(
+      -10px,
+      -10px
+    ); /* moves the button up and to the left */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+  }
+
+  #headshot-img {
+    max-width: 90%;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 2s ease-out; /* Animate the opacity property */
+  }
+
+  #about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  #work-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 20%;
+    max-width: 60%;
+    /* border: 1px solid white; */
+  }
+
+  .project-div {
+    display: flex; /* Add this to use Flexbox */
+    justify-content: space-between; /* Add this to put space between your items */
+    position: relative; /* Add this to establish a new positioning context for children */
+    /* border: 1px solid white; */
+    align-items: center; /* Add this to vertically center the video and text */
+    margin: 20% 0px 20% 0px;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 1s ease-out; /* Animate the opacity property */
+  }
+
+  .project-div.visible {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Become fully opaque */
+  }
+
+  .video-div {
+    position: relative; /* Add this to allow z-index and transform to work */
+    max-width: 60%;
+    z-index: 1; /* This will ensure the video is below the text */
+    flex: 1; /* Add this to make the video take up half the space */
+    margin-right: 40%;
+  }
+
+  #middle-video-div {
+    position: relative;
+    margin-left: 40%;
+    margin-right: 0;
+    /* border-right: 1px solid white;
+        border-bottom: 1px solid white; */
+  }
+
+  .video {
+    width: 100%; /* Change this to make the video take up the full width of the .video-div */
+    opacity: 0.5; /* Add this to make the video greyed out */
+    transition: all 0.5s ease; /* Add this to animate changes */
+    border-radius: 10px;
+  }
+
+  .video:hover {
+    opacity: 1; /* On hover, make the video fully opaque */
+    transform: translate(
+      -10px,
+      -10px
+    ); /* On hover, move the video up and to the left */
+    /* border-bottom: 5px solid white;
+        border-right: 5px solid white; */
+  }
+
+  .text-div-right,
+  .text-div-left {
+    position: absolute; /* Add this to allow the text to overlap the video */
+    z-index: 2; /* Ensure the text is above the video */
+    width: 35%; /* Add this to make the text take up half the space */
+    text-align: center; /* Add this to center the text */
+    align-items: center;
+  }
+
+  .text-div-right {
+    right: 0; /* Position the text at the right of the .project-div */
+    margin-left: 10%;
+  }
+
+  .text-div-left {
+    left: 0; /* Position the text at the left of the .project-div */
+    margin-right: 10%;
+  }
+  
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    transition: opacity 2s ease-out; /* Animate the opacity property */
+    font-family: var(--heading-font);
+  }
+
+  p {
+    transition: opacity 1s ease-out; /* Animate the opacity property */
+    font-family: var(--body-font);
+    color: var(--cyan-500);
+  }
+
+  .inline-link {
+    color: var(--yellow-300);
+    text-decoration: none;
+  }
+
+  .inline-link:hover {
+    color: var(--yellow-300);
+    text-decoration: underline;
+  }
+
+  #logo-img {
+    border-radius: 10px;
+  }
+
+  .side-line {
+    position: fixed;
+    bottom: 0;
+    width: 1px;
+    background-color: var(
+      --cyan-500
+    ); /* Change this to the color you want for the line */
+  }
+
+  .left-side {
+    left: 5%;
+    height: 30vh;
+  }
+
+  .right-side {
+    right: 5%;
+    height: 15vh;
+  }
+
+  .content {
+    position: absolute;
+    top: -20px; /* Adjust this value to position your content above the line */
+    white-space: nowrap;
+    color: var(
+      --cyan-500
+    ); /* Change this to the color you want for the content */
+    font-size: 1.3rem; /* Adjust this value to change the size of the content */
+    /* Add additional styling for your content here */
+    display: block;
+  }
+
+  #email {
+    /* existing styles */
+
+    /* add the following line */
+    writing-mode: vertical-rl;
+    transform: rotate(360deg);
+    position: fixed;
+    top: 50%;
+    right: 4.5%;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    border-radius: 10px;
+  }
+
+  #email:hover {
+    transform: translate(
+      -10px,
+      -10px
+    ); /* moves the button up and to the left */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+  }
+
+  #email-a {
+    opacity: 1;
+    color: var(--cyan-400);
+    text-decoration: none;
+  }
+
+  #linkedin {
+    position: fixed;
+    top: 38vh;
+    left: 4.5%;
+  }
+
+  #facebook {
+    position: fixed;
+    top: 52vh;
+    left: 4.5%;
+  }
+
+  #github {
+    position: fixed;
+    top: 45vh;
+    left: 4.5%;
+  }
+
+  #instagram {
+    position: fixed;
+    top: 59vh;
+    left: 4.5%;
+  }
+
+  .social-icon {
+    fill: var(--cyan-200);
+    height: 1.3em;
+    position: fixed;
+    left: 4.5%;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+  }
+
+  .social-icon:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+  }
+
+  #experience-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 15%;
+    max-width: 60%;
+  }
+
+  #tab-content-container {
+    width: 75%;
+    max-height: 100%;
+    border-left: 1px solid var(--yellow-200);
+    padding-left: 3%;
+    transition: all 1s ease;
+    border-top: none;
+  }
+
+  .tab-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #tab-list-container {
+    max-height: 100%;
+    transition: all 1s ease;
+    width: 25%;
+    margin-top: 0;
+  }
+
+  .tab-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .tab-list li {
+    margin-right: 5%;
+    margin-bottom: 20%;
+    margin-top: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cyan-300);
+    transition: all 0.6s ease; /* "all" will apply the transition to all properties */
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .tab-list li.active {
+    /* border: 1px solid var(--yellow-300); */
+    border-radius: 5px;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-item.active {
+    border: 1px solid var(--yellow-200);
+    padding: 10%;
+    margin-bottom: 5%;
+  }
+
+  .tab-content.active {
+    display: block;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .tab-list li:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    /* adds a shadow to create the "lifted" effect */
+  }
+
+  .tab-content ul li {
+    margin-bottom: 3%;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    list-style-type: none;
+  }
+
+  .tab-content ul li::before {
+    content: "";
+    position: absolute;
+    /* top: 3%; */
+    left: 0;
+    transform: translateY(70%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+    border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+  }
+
+  .achievements {
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    position: relative;
+  }
+
+  .company-span {
+    color: var(--yellow-200);
+  }
+
+  /* -------------------------------------------------------------------- */
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+  }
+
+  .certificate-list {
+    padding-left: none;
+    margin-left: none;
+  }
+
+  #education-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 20%;
+    max-width: 60%;
+  }
+
+  .education-tab-container {
+    width: 100%;
+    display: flex;
+    /* align-items: center;
+        justify-content: center; */
+    flex-direction: row;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+
+  .education-tab-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    order: 2;
+    margin-top: 0;
+  }
+
+  .education-tab-list li {
+    margin-right: 5%;
+    margin-bottom: 20%;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cyan-300);
+    transition: all 0.5s ease; /* "all" will apply the transition to all properties */
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .education-tab-list li.active {
+    /* border: 1px solid var(--yellow-300); */
+    transition: all 0.7s ease;
+    border-radius: 5px;
+    margin-bottom: 8%;
+  }
+
+  .education-tab-content {
+    display: none;
+  }
+
+  .education-tab-item.active {
+    border: 1px solid var(--yellow-200);
+    padding: 10%;
+    transition: all 1s ease;
+  }
+
+  .education-tab-content.active {
+    display: block;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+  }
+
+  .education-tab-list li:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    /* adds a shadow to create the "lifted" effect */
+  }
+
+  .education-tab-content ul li {
+    margin-bottom: 3%;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    list-style-type: none;
+  }
+
+  .education-tab-content ul li::before {
+    content: "";
+    position: absolute;
+    /* top: 3%; */
+    left: 0;
+    transform: translateY(70%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 8px 6px 0; /* Adjust the border-width as needed */
+    border-color: transparent var(--yellow-200) transparent transparent; /* Adjust the border color as needed */
+  }
+
+  #education-tab-content-container {
+    max-width: 80%;
+    height: 100%;
+    max-height: none;
+    border-right: 1px solid var(--yellow-200);
+    padding-right: 3%;
+    transition: all 1s ease;
+    order: 1;
+    border-top: none;
+  }
+
+  .education-tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  #education-tab-list-container {
+    /* border: 1px solid yellow; */
+    margin-top: 3%;
+    transition: all 1s ease;
+    min-width: 25%;
+    order: 2;
+    padding-left: 3%;
+    margin-top: 0;
+  }
+
+  .checkmark {
+    color: white;
+  }
+
+  .certificates {
+    color: white;
+    transition: all 1s ease;
+  }
+
+  .certificates.active {
+    transition: all 1s ease;
+  }
+
+  /* --------------------------------------------------------- */
+
+  #contact-section {
+    text-align: center;
+    position: relative;
+    margin-top: 50vh;
+    margin-left: 25%;
+    max-width: 50%;
+    margin-bottom: 200px;
+  }
+
+  #hello-btn {
+    margin-top: 5%;
+    transition: all 1s ease;
+  }
+
+  footer p {
+    text-align: center;
+    color: var(--cyan-700);
+  }
+
+  #say-hello-a {
+    text-decoration: none;
+    min-width: 120px;
+    min-height: 50px;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box; /* include border and padding in the element's total width and height */
+    font-size: 1.3rem;
+  }
+
+  #resume-btn {
+    text-decoration: none;
+    min-width: 120px;
+    min-height: 50px;
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+    position: relative; /* make the button's position relative to allow moving it */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box; /* include border and padding in the element's total width and height */
+    font-size: 1.3rem;
+  }
+
+  .technology-btn {
+    max-height: 50px;
+    /* max-width: 25%; */
+    background-color: transparent;
+    color: var(--cyan-200);
+    border: 1px solid var(--cyan-200);
+    border-radius: 10px;
+    margin-top: 3%;
+    padding: 2%;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    box-sizing: border-box;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    font-family: var(--body-font);
+    font-size: 1rem;
+  }
+
+  .technology-btn:hover {
+    transform: translate(-5px, -5px); /* moves the button up and to the left */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* adds a shadow to create the "lifted" effect */
+  }
+
+  .stars {
+    color: #ccc;
+    font-size: 36px;
+  }
+
+  .star {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 36px;
+    fill: var(--yellow-400);
+  }
+
+  /* .star:before {
+          content: "\2606";
+      }
+      
+      .star.yellow:before {
+          content: "\2605";
+      }
+      
+      .star.yellow-darker:before {
+          content: "\2605";
+          color: var(--yellow-400);
+      } */
+
+  .review-section {
+    max-width: 80%;
+    margin-left: 15%;
+    border: 1px solid rgb(130, 102, 102);
+    color: var(--cyan-200);
+    border: 1px solid white;
+    opacity: 0;
+    margin-bottom: 50vh;
+  }
+
+  .review-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 1s ease; /* Animate the opacity property */
+  }
+
+  .review-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  #prev-button {
+    left: 10px;
+  }
+
+  #next-button {
+    right: 10px;
+  }
+
+  #reviews-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .review-item {
+    flex: 0 0 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* Your existing CSS styles for stars, review-img, review-header, bottom-div, etc. */
+
+  .review-img {
+    border-radius: 50%; /* Make the image circular */
+    max-width: 30%;
+    object-fit: cover; /* Ensure the image fills the circular container */
+  }
+
+  .review-header {
+    order: 4;
+    max-width: 40%;
+  }
+
+  .bottom-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    transition: opacity 1s ease; /* Animate the opacity property */
+    grid-column: 2/3;
+    grid-row: 1/3;
+    vertical-align: middle;
+  }
+
+  
+
+  .quote-img {
+    fill: var(--cyan-500);
+    height: 4em;
+    transition: opacity 1s, visibility 1s;
+    transition: all 1s ease; /* "all" will apply the transition to all properties */
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .review-text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #review-navigation {
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    margin-top: 1rem;
+  }
+
+  .arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .arrow-button svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--cyan-400);
+    transition: all 0.3s ease; /* "all" will apply the transition to all properties */
+  }
+
+  .arrow-button.right svg:hover {
+    transform: translate(5px, 0); /* moves the button to the right */
+  }
+
+  .arrow-button.left svg:hover {
+    transform: translate(-5px, 0); /* moves the button to the left */
+  }
+
+  /* Add styles for review indicators */
+  .review-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .review-indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 10px 5px;
+  }
+
+  .review-indicator.active {
+    background-color: var(--cyan-600);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #about-div p {
+    color: var(--cyan-300);
+    font-size: 1.1rem;
+  }
+
+  .text-div-right p,
+  .text-div-left p {
+    font-size: 1rem;
+  }
+
+  .review-p {
+    color: var(--cyan-200);
+    font-size: 1.1rem;
+    line-height: 33px;
+    text-align: center;
+    transition: opacity 1s ease; /* Animate the opacity property */
+  }
+}
