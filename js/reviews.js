@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const REVIEWS_ENDPOINT =
-    "https://63792d007eb4705cf27caba9.mockapi.io/reviews";
+    "../reviews.json";
   const reviewsContainer = document.getElementById("reviews-list");
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
