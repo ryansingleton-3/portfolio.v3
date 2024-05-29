@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const REVIEWS_ENDPOINT =
-    "../reviews.json";
+  const REVIEWS_ENDPOINT = "../reviews.json";
   const reviewsContainer = document.getElementById("reviews-list");
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
@@ -63,21 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Retrieve and store reviews
+  console.log("Fetching reviews from:", REVIEWS_ENDPOINT);
   fetch(REVIEWS_ENDPOINT)
-    .then((response) => response.json())
+    .then((response) => {
+      console.log("Response status:", response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((fetchedReviews) => {
       reviews = fetchedReviews;
       displayReview(currentIndex);
-      if (currentIndex === 0) {
-        prevButton.style.visibility = "hidden";
-      } else if (currentIndex === reviews.length - 1) {
-        nextButton.style.visibility = "hidden";
-      } else {
-        prevButton.style.visibility = "visible";
-        nextButton.style.visibility = "visible";
-      }
+      updateNavigationButtons();
     })
-    .catch((error) => console.log("Error fetching reviews:", error));
+    .catch((error) => console.error("Error fetching reviews:", error));
 
   // Event listener for previous button click
   prevButton.addEventListener("click", () => {
