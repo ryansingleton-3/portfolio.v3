@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Josh H. - Lightsail VR",
+    "rating": 5,
+    "imgPath": "images/JoshH.png",
+    "review": "Ryan is the JavaScript dev you’re looking for, full stop. He jumped into a very complex and fast paced production environment for a major feature film and was able to solve every issue thrown at him. His tenacity and dedication meant so much to our studio, and I can’t wait to work with him again. We couldn’t have done it without him. 10/10, no notes."
+  },
+  {
+    "id": "2",
+    "name": "Levi C - OMG Commerce",
+    "rating": 5,
+    "imgPath": "images/LeviChang.png",
+    "review": "I had the pleasure of working with Ryan on several occasions, and I can say with confidence that he is an exceptional colleague and an expert in his field. Ryan's expertise in both Javascript and Python has been invaluable in creating tailored solutions that has helped enhance processes and increase efficiency for his clients. Beyond his technical expertise, Ryan is a true team player who is always willing to lend a helping hand and collaborate on projects. I highly recommend Ryan for his technical proficiency, problem-solving skills, and collaborative approach."
+  },
+  {
+    "id": "3",
+    "name": "Matt S. - OMG Commerce",
+    "rating": 5,
+    "imgPath": "images/MattSlaymaker.png",
+    "review": "I have been following [Ryan's] posts on LinkedIn [that are] showing his development when it comes to programming, and I'm just blown away. He volunteered to put his skills to work for one of our Google clients who needs website help, and I know it is going to help performance tremendously."
+  },
+  {
+    "id": "4",
+    "name": "Trenton B. - OMG Commerce",
+    "rating": 5,
+    "imgPath": "images/TrentonBodenbach.png",
+    "review": "Wanted to give a shoutout to Ryan for creating a sweet script that breaks out spend by Branded vs Non Branded, by ad type, branded vs non branded ad type, by targeting type, and by BR or NB targeting type. Super quick to use and great for audits!"
+  }
+]
